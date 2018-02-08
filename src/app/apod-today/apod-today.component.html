@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+    </div>
+
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <div class="card" style="width: 45rem;">
+        <img class="card-img-top" [src]="service.apodResponse.url" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{service.apodResponse.title}}</h5>
+          <p class="card-text">{{service.apodResponse.explanation}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+
+    </div>
+
+  </div>
+
+</div>
