@@ -2,20 +2,9 @@
 <div>
 
 
-  <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic" [(ngModel)]="model">
-    <label ngbButtonLabel class="btn-primary">
-      <input ngbButton type="radio" [value]="'beer'"> Beers
-    </label>
-    <label ngbButtonLabel class="btn-primary">
-      <input ngbButton type="radio" [value]="'apod'"> Apod
-    </label>
-    <label ngbButtonLabel class="btn-primary">
-      <input ngbButton type="radio" [value]="'form'"> Form sample
-    </label>
-  </div>
-  <hr>
+    <a uiSref="beer" uiSrefActive="active">Beer</a>
+    <a uiSref="apod" uiSrefActive="active">Apod</a>
+    <a uiSref="form" uiSrefActive="active">Form</a>    
 
-  <app-beers *ngIf="model==='beer'"></app-beers>
-  <app-apod *ngIf="model==='apod'"></app-apod>
-  <app-my-form *ngIf="model==='form'"></app-my-form>
+  <ui-view></ui-view>
 </div>

@@ -14,6 +14,11 @@ import { ApodTodayComponent } from './apod-today/apod-today.component';
 import { ApodAnyDayComponent } from './apod-any-day/apod-any-day.component';
 import { MyFormComponent } from './my-form/my-form.component';
 
+import {UIRouterModule} from '@uirouter/angular';
+
+const beerState = { name: 'beer', url: '/beer',  component: BeersComponent };
+const apodState = { name: 'apod', url: '/apod',  component: ApodComponent };
+const formState = { name: 'form', url: '/form',  component: MyFormComponent };
 
 @NgModule({
   declarations: [
@@ -29,7 +34,8 @@ import { MyFormComponent } from './my-form/my-form.component';
     NgbModule.forRoot(),
     FormsModule,
     HttpModule,
-    JsonpModule
+    JsonpModule,
+    UIRouterModule.forRoot({ states: [ beerState, apodState, formState ], useHash: true })
   ],
   providers: [RequestService],
   bootstrap: [AppComponent]

@@ -11,7 +11,7 @@ export class MyFormComponent implements OnInit {
   public user: User;
   public myEmail: string;
   // tslint:disable-next-line:max-line-length
-  public myRegex = '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/';
+  public myRegex = '';
 
   constructor() {
     this.user =	new	User('',	'',	'');

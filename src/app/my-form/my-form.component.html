@@ -16,7 +16,7 @@
     
     <div class="form-group">
         <label>Email</label>
-        <input name="myEmail" class="form-control" pattern="myRegex" #myEmail="ngModel" ngModel required>
+        <input name="myEmail" class="form-control" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #myEmail="ngModel" ngModel required>
         <div [hidden]="myEmail.valid || myEmail.pristine" class="alert alert-danger">Last name is required</div>
     </div>
     <!-- CONTINUA ... -->
